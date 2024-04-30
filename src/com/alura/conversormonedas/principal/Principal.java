@@ -8,37 +8,56 @@ import java.util.Scanner;
 
 public class Principal {
     public static void main(String[] args) {
+        int opcion = 0;
         Scanner ingresaCodigo = new Scanner(System.in);
         ConsultaMoneda consultaMoneda = new ConsultaMoneda();
         ParametrosDeConversion parametros = new ParametrosDeConversion();
-        System.out.println("*************************");
+        System.out.println("*************************************");
         System.out.println("Bienvenido al conversor de monedas");
-        System.out.println("Elija opcion de conversion segun monedas disponibles:");
-        System.out.println("***");
+        System.out.println("********");
         System.out.println("""
-                """ +
-                "USD --- Dólar Estadounidense\n" +
-                "                ARS --- Peso Argentino\n" +
-                "                BRL --- Real Brasileño\n" +
-                "                COP --- Peso Colombiano\n" +
-                "                EUR --- Euro\"\"\"");
+                Menu inicial:
+                
+                1-Convertir moneda
+                2-Hisotial de conversiones
+                9-Salir
+                """);
+        while (opcion != 9)
 
-        System.out.println("Ingrese moneda base");
+            opcion = ingresaCodigo.nextInt();
+
         var monedaBase = String.valueOf(ingresaCodigo.nextLine());
-        System.out.println("Ingrese moneda a cambiar");
-        var monedaACambiar =String.valueOf(ingresaCodigo.nextLine());
-        System.out.println("Ingrese cantidad a cambiar");
-        var cantidad = Integer.valueOf(ingresaCodigo.nextInt());
-        parametros.setCantidadACambiar(cantidad);
+            switch (opcion) {
+                case 1:
+                    System.out.println("Ingrese codigo de moneda inicial:");
+                    System.out.println("""
+                Dolar USA       --> USD
+                Real Brasileño  --> BRL
+                Peso Argentino  --> ARS
+                Peso Chileno    --> CLP
+                Euro            --> EUR
+                """);
+                    System.out.println("Ingrese moneda a cambiar");
+                    var monedaACambiar = String.valueOf(ingresaCodigo.nextLine());
+                    System.out.println("Ingrese cantidad a cambiar");
+                    var cantidad = Integer.valueOf(ingresaCodigo.nextInt());
+                    parametros.setCantidadACambiar(cantidad);
+                    Moneda moneda = consultaMoneda.buscaMoneda(monedaBase, monedaACambiar);
+                    parametros.calculadora(moneda.conversion_rate());
+                    System.out.println(parametros.getCantidadACambiar() + monedaBase + " equivalen a : " + parametros.getTotalConversion() + monedaACambiar);
+                    System.out.println("fecha conversion: " + moneda.time_last_update_utc());
+                case 2:
+                case 9:
+                    System.out.println("Gracias por utilizar nuestros servicios");
+                    break;
 
-        Moneda moneda = consultaMoneda.buscaMoneda(monedaBase,monedaACambiar);
-        parametros.calculadora(moneda.conversion_rate());
-        System.out.println(moneda);
-        System.out.println(monedaBase);
-        System.out.println(monedaACambiar);
-        System.out.println(moneda.conversion_rate());
-        System.out.println(cantidad+monedaBase+" equivalen a : "+parametros.getTotalConversion()+monedaACambiar);
-        System.out.println("fecha conversion: "+parametros.getTiempo());
+                default:
+                    System.out.println("Opcion no valida");
 
-    }
-}
+            }
+            }
+
+            }
+
+
+
