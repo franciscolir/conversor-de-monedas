@@ -3,18 +3,19 @@ package com.alura.conversormonedas.principal;
 import com.alura.conversormonedas.api.ConsultaMoneda;
 import com.alura.conversormonedas.monedas.Moneda;
 import com.alura.conversormonedas.monedas.ParametrosDeConversion;
+import com.alura.conversormonedas.monedas.ResumenConversion;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Principal {
     public static void main(String[] args) {
+        int opcion = 0;
 
         Scanner ingresaCodigo = new Scanner(System.in);
-        ConsultaMoneda consultaMoneda = new ConsultaMoneda();
-        ParametrosDeConversion parametros = new ParametrosDeConversion();
-     MenuInfo menuInfo = new MenuInfo();
-     menuInfo.bienvenida();
-        int opcion = 0;
+        MenuInfo menuInfo = new MenuInfo();
+        menuInfo.bienvenida();
+
         while (opcion != 9) {
             menuInfo.menuPrincipal();
             opcion = ingresaCodigo.nextInt();
@@ -23,21 +24,19 @@ public class Principal {
                     menuInfo.listaMonedas();
                     menuInfo.seleccionMonedas();
                     menuInfo.conversionDeMonedas();
+                    menuInfo.guardaConversion();
                     break;
                 case 2:
-                    System.out.println("opcion2");
+                    menuInfo.historial();
+
                     break;
                 case 9:
-                    System.out.println("Gracias por utilizar nuestros servicios");
+                    menuInfo.finalizar();
                     break;
 
                 default:
                     System.out.println("Opcion no valida");
             }
-            }
-            }
-
-            }
-
-
-
+        }
+    }
+}
