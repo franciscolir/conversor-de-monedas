@@ -23,8 +23,8 @@ public class ConsultaMoneda {
             HttpResponse<String> response = client
                     .send(request, HttpResponse.BodyHandlers.ofString());
             return new Gson().fromJson(response.body(), Moneda.class);
-        } catch (IOException | InterruptedException e) {
-            throw new RuntimeException("No se pudo hace consulta"+e);
+        } catch (Exception e) {
+            throw new RuntimeException("No se pudo hacer la conversion");
         }
     }
 }

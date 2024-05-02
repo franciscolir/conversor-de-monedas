@@ -8,26 +8,14 @@ import com.alura.conversormonedas.monedas.ResumenConversion;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class MenuInfo extends ResumenConversion {
-    ArrayList<MenuInfo> conversion = new ArrayList<>();
-    Scanner ingresaCodigo = new Scanner(System.in);
-    ConsultaMoneda consultaMoneda = new ConsultaMoneda();
-    ParametrosDeConversion parametros = new ParametrosDeConversion();
-
-    public MenuInfo(String monedaBase, String monedaACambiar, int cantidad, String total) {
-        super(monedaBase, monedaACambiar, cantidad, total);
-    }
-
-    public MenuInfo() {
-        super();
-    }
+public class MenuInfo  {
+    //ArrayList<ResumenConversion> listaConversion = new ArrayList<>();
+    //Scanner ingresaCodigo = new Scanner(System.in);
+    //ConsultaMoneda consultaMoneda = new ConsultaMoneda();
+    //ParametrosDeConversion parametros = new ParametrosDeConversion();
+    //ResumenConversion resumen = new ResumenConversion("","",1,"");
 
 
-    public void bienvenida() {
-        System.out.println("*************************************");
-        System.out.println("Bienvenido al conversor de monedas");
-        System.out.println("*************************************");
-    }
 
     public void listaMonedas() {
         System.out.println("""
@@ -52,10 +40,12 @@ public class MenuInfo extends ResumenConversion {
                 """);
     }
 
-    public void seleccionMonedas() {
+   /* public void seleccionMonedas() {
         System.out.println("Ingrese codigo de moneda inicial:");
+
         setMonedaBase(ingresaCodigo.nextLine().toUpperCase());
         System.out.println("Ingrese moneda a cambiar");
+
         setMonedaACambiar(ingresaCodigo.nextLine().toUpperCase());
         System.out.println("Ingrese cantidad a cambiar");
         setCantidad(ingresaCodigo.nextInt());
@@ -69,24 +59,41 @@ public class MenuInfo extends ResumenConversion {
         setTotal(parametros.getCantidadACambiar() + " " + getMonedaBase() + " equivalen a : " + parametros.getTotalConversion() + " " + getMonedaACambiar());
         System.out.println(getTotal());
         System.out.println("fecha conversion: " + moneda.time_last_update_utc());
+        listaConversion.add(resumen);
+        System.out.println("Cantidad de conversiones: " + listaConversion.size());
+        System.out.println("imprimir conversiones");
+        for (ResumenConversion registro : listaConversion) {
+            System.out.println(registro);
+        }
     }
 
     public void guardaConversion() {
 
-        conversion.add(new MenuInfo(getMonedaBase(),getMonedaACambiar(),getCantidad(),getTotal()));
-        System.out.println(conversion.size());
-    }
-    public void historial(){
-        System.out.println("Historial de conversiones");
-        for (MenuInfo registro : conversion) {
-            System.out.println("*************************************");
-            System.out.println("moneda base: " + getMonedaBase());
-            System.out.println("moneda a cambiar: " + getMonedaACambiar());
-            System.out.println("cantidad a cambiar: " + getCantidad());
-            System.out.println("total de la conversion: " + getTotal());
-            System.out.println("*************************************");
-        }
-    }
+        System.out.println("contenido a guardar en array: lo cambie recien");
+        listaConversion.add(resumen);
+        System.out.println("Cantidad de conversiones: " + listaConversion.size());
+        System.out.println("imprimir conversiones");
+        for (ResumenConversion registro : listaConversion) {
+            System.out.println(registro);
+    }}
+
+
+    public void historial() {
+        if (listaConversion.isEmpty()){
+                    System.out.println("Historial vacio");
+                }else{
+                    System.out.println("Historial de conversiones");
+                    for (ResumenConversion registro : listaConversion) {
+                        //System.out.println("*************************************");
+                        System.out.println(registro);
+                        //System.out.println("moneda a cambiar: " + getMonedaACambiar());
+                        //System.out.println("cantidad a cambiar: " + getCantidad());
+                        //System.out.println("total de la conversion: " + getTotal());
+                        //System.out.println("*************************************");
+                        //}
+                    }}
+    }*/
+
     public void finalizar() {
         System.out.println("*************************************");
         System.out.println("Gracias por utilizar nuestros servicios");
