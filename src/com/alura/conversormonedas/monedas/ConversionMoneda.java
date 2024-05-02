@@ -51,6 +51,7 @@ public class ConversionMoneda {
 
         Moneda moneda = consultaMoneda.buscaMoneda(monedaBase, monedaACambiar);
         parametros.calculadora(moneda.conversion_rate());
+        System.out.println("*************************************");
         setTotal(parametros.getCantidadACambiar() + " " + monedaBase + " equivalen a : " + parametros.getTotalConversion() + " " + monedaACambiar);
         System.out.println(total);
         System.out.println("fecha conversion: " + moneda.time_last_update_utc());
