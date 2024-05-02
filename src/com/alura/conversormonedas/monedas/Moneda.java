@@ -13,7 +13,9 @@ public record Moneda(
         double conversion_rate ) {
 
 
-
-
+    @Override
+    public String result() {
+        return result;
+    }
 }
 

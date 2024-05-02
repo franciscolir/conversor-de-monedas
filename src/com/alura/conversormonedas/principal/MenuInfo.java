@@ -1,6 +1,13 @@
 package com.alura.conversormonedas.principal;
 
+import com.alura.conversormonedas.monedas.ConversionMoneda;
+
 public class MenuInfo  {
+
+
+    public void muestraObjetos(){
+        ConversionMoneda consulta = new ConversionMoneda("","",1,"");
+    }
 
     public void listaMonedas() {
         System.out.println("""

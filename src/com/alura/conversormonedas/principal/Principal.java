@@ -17,12 +17,18 @@ public class Principal {
 
         while (opcion != 9) {
             MenuInfo menuInfo = new MenuInfo();
-            ConversionMoneda consulta = new ConversionMoneda("","",1,"");
+            menuInfo.muestraObjetos();
+            //ConversionMoneda consulta = new ConversionMoneda("","",1,"");
             menuInfo.menuPrincipal();
+            while (!ingresaOpcion.hasNextInt()) {
+                System.out.println("Por favor, introduce solo números:");
+                ingresaOpcion.next();
+            }
             opcion = ingresaOpcion.nextInt();
 
             switch (opcion) {
                 case 1:
+                    ConversionMoneda consulta = new ConversionMoneda("","",1,"");
                     menuInfo.listaMonedas();
                     consulta.seleccionMonedas();
                     consulta.conversionDeMonedas();

@@ -8,6 +8,7 @@ public class ConversionMoneda {
     private String monedaACambiar;
     private int cantidad;
     private String total;
+    private String error = "error";
 
 
     public ConversionMoneda(String monedaBase, String monedaACambiar, int cantidad, String total) {
@@ -15,12 +16,13 @@ public class ConversionMoneda {
         this.monedaACambiar = monedaACambiar;
         this.cantidad = cantidad;
         this.total = total;
+
     }
     Scanner ingresaCodigo = new Scanner(System.in);
     ConsultaMoneda consultaMoneda = new ConsultaMoneda();
     ParametrosDeConversion parametros = new ParametrosDeConversion();
 
-      public void setMonedaBase(String monedaBase) {
+    public void setMonedaBase(String monedaBase) {
         this.monedaBase = monedaBase;
     }
 
@@ -40,21 +42,30 @@ public class ConversionMoneda {
         System.out.println("Ingrese codigo de moneda inicial:");
 
         setMonedaBase(ingresaCodigo.nextLine().toUpperCase());
-        System.out.println("Ingrese moneda a cambiar");
+        System.out.println("Ingrese codigo de moneda a cambiar");
 
         setMonedaACambiar(ingresaCodigo.nextLine().toUpperCase());
         System.out.println("Ingrese cantidad a cambiar");
+        while (!ingresaCodigo.hasNextInt()) {
+            System.out.println("Por favor, introduce solo números.'\n'" +
+                    "Indique cantidad:");
+            ingresaCodigo.next();
+        }
         setCantidad(ingresaCodigo.nextInt());
         parametros.setCantidadACambiar(cantidad);
     }
     public void conversionDeMonedas() {
 
         Moneda moneda = consultaMoneda.buscaMoneda(monedaBase, monedaACambiar);
-        parametros.calculadora(moneda.conversion_rate());
-        System.out.println("*************************************");
-        setTotal(parametros.getCantidadACambiar() + " " + monedaBase + " equivalen a : " + parametros.getTotalConversion() + " " + monedaACambiar);
-        System.out.println(total);
-        System.out.println("fecha conversion: " + moneda.time_last_update_utc());
+        if (moneda.result().equals(error)){
+            System.out.println("Codigo erroneo. Intente nuevamente");
+        }else {
+            parametros.calculadora(moneda.conversion_rate());
+            System.out.println("*************************************");
+            setTotal(parametros.getCantidadACambiar() + " " + monedaBase + " equivalen a : " + parametros.getTotalConversion() + " " + monedaACambiar);
+            System.out.println(total);
+            System.out.println("Fecha de conversion: " + parametros.getFechaConversion());
+        }
     }
 
     @Override
