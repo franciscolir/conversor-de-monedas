@@ -2,8 +2,6 @@ package com.alura.conversormonedas.api;
 
 import com.alura.conversormonedas.monedas.Moneda;
 import com.google.gson.Gson;
-
-import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
@@ -24,7 +22,7 @@ public class ConsultaMoneda {
                     .send(request, HttpResponse.BodyHandlers.ofString());
             return new Gson().fromJson(response.body(), Moneda.class);
         } catch (Exception e) {
-            throw new RuntimeException("No se pudo hacer la conversion");
+            throw new RuntimeException("No se pudo hacer la conversion" + e);
         }
     }
 }

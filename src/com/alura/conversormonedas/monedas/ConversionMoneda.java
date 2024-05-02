@@ -52,16 +52,17 @@ public class ConversionMoneda {
         Moneda moneda = consultaMoneda.buscaMoneda(monedaBase, monedaACambiar);
         parametros.calculadora(moneda.conversion_rate());
         setTotal(parametros.getCantidadACambiar() + " " + monedaBase + " equivalen a : " + parametros.getTotalConversion() + " " + monedaACambiar);
+        System.out.println(total);
         System.out.println("fecha conversion: " + moneda.time_last_update_utc());
     }
 
     @Override
     public String toString() {
-        return "Resumen de la conversión: " +
-                "[Moneda base: " + monedaBase +
-                ", Moneda a cambiar: " + monedaACambiar +
-                ", Cantidad: " + cantidad +
-                ", Total: " + total + "]";
+        return "******************************* '\n'"  +
+                "Moneda base: " + monedaBase + "'\n'"+
+                "Moneda a cambiar: " + monedaACambiar +"'\n'"+
+                "Cantidad: " + cantidad +"'\n'"+
+                "Total: " + total;
     }
 }
 

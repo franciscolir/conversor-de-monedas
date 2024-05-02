@@ -5,24 +5,26 @@ public class MenuInfo  {
     public void listaMonedas() {
         System.out.println("""
                 Monedas disponibles:
-                                
+                
                 Dolar USA       --> USD
                 Real Brasileño  --> BRL
                 Peso Argentino  --> ARS
                 Peso Chileno    --> CLP
                 Euro            --> EUR
                 """);
+        System.out.println("*************************************");;
     }
 
     public void menuPrincipal() {
         System.out.println("""
-                                
+                
                 Menu inicial:
-                                
+                
                 1-Convertir moneda
                 2-Hisotial de conversiones
                 9-Salir
                 """);
+        System.out.println("*************************************");
     }
 
     public void finalizar() {

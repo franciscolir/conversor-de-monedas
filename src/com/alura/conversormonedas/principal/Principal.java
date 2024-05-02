@@ -28,8 +28,6 @@ public class Principal {
                     consulta.conversionDeMonedas();
                     listaConversion.add(consulta);
 
-                    for (ConversionMoneda registro : listaConversion) {
-                        System.out.println(registro);}
                     break;
 
                 case 2:
