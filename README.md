@@ -1,11 +1,10 @@
 <h1 align="center"> Conversor de monedas con API </h1>
 
-<h2>Challenge 1<h2/>
--Alura cursos.
+<h2>ALURA | ORACLE<h2/>
+Challenge 1
 
   <p align="center">
-   <img src=(https://github.com/franciscolir/conversor-de-monedas/assets/75907947/01c9103b-97d4-4b6e-9b2f-26baf945ee39)
->
+   <img src=https://github.com/franciscolir/conversor-de-monedas/assets/75907947/35cd9f7a-c51e-4861-a38d-cf4a53ae856e>
    </p>
    
 ## Descripción del Proyecto
@@ -21,7 +20,7 @@ Contiene un manejo de excepciones al realzar la consulta a API y ayuda al usuari
    
 ## Estado del proyecto
    <p align="left">
-   <img src="https://img.shields.io/badge/STATUS-EN%20DESAROLLO-green">
+   <img src="https://img.shields.io/badge/STATUS-TESTING-green">
    Fecha de la última versión del proyecto: Mayo 2024.
    </p>
    
@@ -34,10 +33,46 @@ Contiene un manejo de excepciones al realzar la consulta a API y ayuda al usuari
 - `Funcionalidad 5`: manejo de excepciones en consulta a API
 - `Funcionalidad 6`: manejo de errores al ingresar codigo incorrecto de moneda
 
+
+
+## Imagenes de Aplicacion
+<h3>Funcionamiento<h3/>
+  <p align="left">
+   <img src=https://github.com/franciscolir/conversor-de-monedas/assets/75907947/c4565f04-3ec6-49ea-ba5b-9a2f7cac5ce6>
+   </p>
+   
+   <p align="left">
+   <img src=https://github.com/franciscolir/conversor-de-monedas/assets/75907947/4c6bf245-8742-4c02-9cc1-2e8e19d14d9c>
+   </p>
+   
+   <p align="left">
+   <img src=https://github.com/franciscolir/conversor-de-monedas/assets/75907947/829650d8-e467-453f-8a48-7a4693384917>
+     </p>
+     <p align="left">
+   <img src=https://github.com/franciscolir/conversor-de-monedas/assets/75907947/0943d725-b75b-456e-bdc5-b49ba9916499>
+     </p>
+     <p align="left">
+   <img src=https://github.com/franciscolir/conversor-de-monedas/assets/75907947/249ec2ef-c881-4cf6-8ac1-1b9dbfc6df6d>
+     </p>
+     <h3>Opciones no validas y errores<h3/>
+     <p align="left">
+   <img src=https://github.com/franciscolir/conversor-de-monedas/assets/75907947/05fa121f-faca-477b-b403-2d63040ab548>
+     </p>
+     <p align="left">
+   <img src=https://github.com/franciscolir/conversor-de-monedas/assets/75907947/2f4e82ab-20ae-472e-94cf-452e330a7bb1>
+     </p>
+  <p align="left">
+   <img src=https://github.com/franciscolir/conversor-de-monedas/assets/75907947/f5b12c5c-9060-4daa-9fbd-32215de2ffbd>
+     </p>
+      <h3>Salida del programa<h3/> 
+     <p align="left">
+   <img src=https://github.com/franciscolir/conversor-de-monedas/assets/75907947/2b7d005e-305e-44a6-aa1a-07c818a95d53>
+     </p>
+        
 ## Acceso al proyecto
 -El proyecto actualmente se encuantr alojado en Github. 
 -Puedes acceder en el siguente enlace: https://github.com/franciscolir/conversor-de-monedas/
 
 ## Autores
 
-Github: franciscolir
+Github: @franciscolir
