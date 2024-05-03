@@ -10,7 +10,7 @@ Challenge 1
 ## Descripción del Proyecto
 
 <p align="justify">
-Esta aplicación de cambio de moneda es parte de la formación de parte de la formación de BackEnd con Java en Alura en alianza con Oracle.
+Esta aplicación de cambio de moneda es parte de la formación de BackEnd con Java en Alura. Esto en alianza con Oracle.
 Tiene como objetivo enseñar el uso de java para crear aplicaciones dinámicas y consumo de API. Además de desarrollar utilizando librerías de Java.
 
 Es un conversor de monedas con valores actualizados por medio de API. Entrega la fecha de conversión con java.time. Además, permite elegir entre diversas monedas y realizar consulta a historial de las conversiones realizadas.
