@@ -14,7 +14,7 @@ Esta aplicación de cambio de moneda es parte de la formación de BackEnd con Ja
 Tiene como objetivo enseñar el uso de java para crear aplicaciones dinámicas y consumo de API. Además de desarrollar utilizando librerías de Java.
 
 Es un conversor de monedas con valores actualizados por medio de API. Entrega la fecha de conversión con java.time. Además, permite elegir entre diversas monedas y realizar consulta a historial de las conversiones realizadas.
-Contiene un manejo de excepciones al realzar la consulta a API y ayuda al usuario indicando si ingreso mal algún código de moneda, junto con permitir solo “caracteres numéricos” cuando se pide ingresar una opción en menú con elección según número.
+Contiene un manejo de excepciones al realizar la consulta a API y ayuda al usuario indicando si ingreso mal algún código de moneda. Ademas permite solo “caracteres numéricos” cuando se pide ingresar una opción en menú con elección según número.
 
    </p>
    
@@ -27,7 +27,7 @@ Contiene un manejo de excepciones al realzar la consulta a API y ayuda al usuari
 ## :hammer:Funcionalidades del proyecto
 
 - `Funcionalidad 1`: consulta de monedas con valores actualizados  por medio de API
-- `Funcionalidad 2`: conversion de monedas segun parametros ingresado por usuaro (monedas y cantdad)
+- `Funcionalidad 2`: conversion de monedas segun parametros ingresado por usuaro (monedas y cantidad)
 - `Funcionalidad 3`: consulta de historial de busqueda de conversiones
 - `Funcionalidad 4`: registro de fecha de conversion con java.time
 - `Funcionalidad 5`: manejo de excepciones en consulta a API
@@ -70,7 +70,7 @@ Contiene un manejo de excepciones al realzar la consulta a API y ayuda al usuari
      </p>
         
 ## Acceso al proyecto
--El proyecto actualmente se encuantr alojado en Github. 
+-El proyecto actualmente se encuantra alojado en Github. 
 -Puedes acceder en el siguente enlace: https://github.com/franciscolir/conversor-de-monedas/
 
 ## Autores
