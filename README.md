@@ -1,7 +1,7 @@
 <h1 align="center"> Conversor de monedas con API </h1>
 
 <h2>ALURA | ORACLE<h2/>
-Challenge 1
+Challenge
 
   <p align="center">
    <img src=https://github.com/franciscolir/conversor-de-monedas/assets/75907947/35cd9f7a-c51e-4861-a38d-cf4a53ae856e>
